@@ -2,40 +2,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
 :root {
-  /* screen breakpoints */
+  /* Screen breakpoints */
+  --breakpoint-desktop: 1024px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile: 480px;
 
-  --bp-desktop: 1024px;
-  --bp-tablet: 768px;
-  --bp-mobile: 480px;
+  /* Colors */
+  --color-background: #0b0d17;
+  --color-heading-text: #FFFFFF;
+  --color-subtext: #D0D6F9;
 
-  /* colors */
+  /* Typography */
+  --font-family-primary: Bellefair, sans-serif;
+  --font-family-secondary: Barlow Condensed, sans-serif;
 
-  --clr-background: #0b0d17;
-  --clr-text-heading: #FFFFFF;
-  --clr-text-subtext: #D0D6F9;
+  --font-size-heading-1: 150px;
+  --font-size-heading-2: 100px;
+  --font-size-heading-3: 56px;
+  --font-size-heading-4: 32px;
+  --font-size-heading-5: 28px; /* Secondary font family */
 
-  /* typography */
+  --font-size-subheading-1: 28px;
+  --font-size-subheading-2: 14px; /* Secondary font family */
+  --font-size-nav-text: 16px; /* Secondary font family */
 
-  --ff-primary: Bellefair, sans-serif;
-  --ff-secondary: Barlow Condensed, sans-serif;
-
-
-  --fs-heading-1: 150px;
-  --fs-heading-2: 100px;
-  --fs-heading-3: 56px;
-  --fs-heading-4: 32px;
-  --fs-heading-5: 28px; /* ff-secondary */
-  
-  --fs-subheading-1: 28px;
-  --fs-subheading-2: 14px; /* ff-secondary */
-  --fs-nav-text: 16px; /* ff-secondary */
-
-  --chrt-spacing-heading-5: 4.75;
-  --chrt-spacing-subheading-2: 2.35;
-  --chrt-spacing-nav-text: 2.7;
-
-
+  --letter-spacing-heading-5: 4.75;
+  --letter-spacing-subheading-2: 2.35;
+  --letter-spacing-nav-text: 2.7;
 }
+
+h1,h2,h3,h4 {
+  font-family: var(--font-family-primary);
+}
+
+h5 {
+  font-family: var(--font-family-secondary);
+}
+
+h1 {
+  font-size: var(--font-size-heading-1);
+}
+h2 {
+  font-size: var(--font-size-heading-2);
+}
+h3 {
+  font-size: var(--font-size-heading-3);
+}
+h4 {
+  font-size: var(--font-size-heading-4);
+}
+h5 {
+  font-size: var(--font-size-heading-5);
+}
+
+
+/* reset css rules */
 
 * {
   padding: 0;
@@ -45,6 +66,10 @@
 
 
 .App {
-
-  
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
