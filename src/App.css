@@ -26,9 +26,9 @@
   --font-size-subheading-2: 14px; /* Secondary font family */
   --font-size-nav-text: 16px; /* Secondary font family */
 
-  --letter-spacing-heading-5: 4.75;
-  --letter-spacing-subheading-2: 2.35;
-  --letter-spacing-nav-text: 2.7;
+  --letter-spacing-heading-5: 4.75px;
+  --letter-spacing-subheading-2: 2.35px;
+  --letter-spacing-nav-text: 2.7px;
 }
 
 h1,h2,h3,h4 {
@@ -38,6 +38,10 @@ h1,h2,h3,h4 {
 
 h5 {
   font-family: var(--font-family-secondary);
+  letter-spacing: var(--letter-spacing-heading-5);
+}
+
+h5, body {
   color: var(--color-subtext);
 }
 
@@ -70,9 +74,28 @@ h5 {
 .App {
   height: 100vh;
   width: 100vw;
-  background-color: black;
   background-image: url("./assets/home/background-home-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 5%;
 }
 
+@media all and (min-width: 480px) {
+  .App {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .App {
+    background-image: url("./assets/home/background-home-desktop.jpg");
+  }
+}
+
+
+.header {
+  /* background-color: coral; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
