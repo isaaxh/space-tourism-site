@@ -1,42 +1,37 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+:root {
+  /* colors */
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+  --clr-background: #0b0d17;
+  --clr-text-heading: #FFFFFF;
+  --clr-text-subtext: #D0D6F9;
 
-.card {
-  padding: 2em;
-}
+  /* typography */
 
-.read-the-docs {
-  color: #888;
+  --ff-primary: Bellefair, sans-serif;
+  --ff-secondary: Barlow Condensed, sans-serif;
+
+
+  --fs-heading-1: 150px;
+  --fs-heading-2: 100px;
+  --fs-heading-3: 56px;
+  --fs-heading-4: 32px;
+  --fs-heading-5: 28px; /* ff-secondary */
+  
+  --fs-subheading-1: 28px;
+  --fs-subheading-2: 14px; /* ff-secondary */
+  --fs-nav-text: 16px; /* ff-secondary */
+
+  --chrt-spacing-heading-5: 4.75;
+  --chrt-spacing-subheading-2: 2.35;
+  --chrt-spacing-nav-text: 2.7;
+
+
+
+
+
+
+
+
 }
