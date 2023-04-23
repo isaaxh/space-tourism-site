@@ -21,6 +21,7 @@
   --font-size-heading-3: 5.6rem;
   --font-size-heading-4: 3.2rem;
   --font-size-heading-5: 2rem; /* Secondary font family */
+  --font-size-nav-items: 1.4rem;
 
   --font-size-subheading-1: 2.8rem;
   --font-size-subheading-2: 1.4rem; /* Secondary font family */
@@ -53,11 +54,12 @@ h1,h2,h3,h4,button {
   font-weight: 400;
 }
 
-h5 {
+h5, .nav-links {
   font-family: var(--font-family-secondary);
   font-weight: 400;
   letter-spacing: var(--letter-spacing-heading-5);
 }
+
 
 h1,h2,h3,h4,h5,p {
   padding-top: 1rem;
@@ -87,6 +89,9 @@ p {
   line-height: 2;
   max-width: 550px;
 }
+.nav-bar {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
 
 .App {
   height: 100vh;
@@ -102,6 +107,7 @@ p {
 @media all and (min-width: 480px) {
   .App {
     background-image: url("./assets/home/background-home-tablet.jpg");
+    padding: 0 0 5% 0; 
   }
 }
 
@@ -116,6 +122,35 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: var(--color-heading-text);
+  display: sticky;
+  padding-left: 5%;
+}
+
+.nav-bar {
+  letter-spacing: var(--letter-spacing-nav-text);
+  color: var(--color-heading-text);
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  gap: 1rem; 
+  height: 10vh;
+  width: 70vw;
+  align-items: center;
+  justify-content: space-around;
+  padding-inline: 2rem;
+}
+
+.glass{
+  background: linear-gradient(135deg, 
+  rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-number {
+  display: none;
+  font-weight: 800;
 }
 
 .main-body {
@@ -126,7 +161,6 @@ p {
 }
 
 .intro-container {
-  /* background-color: coral; */
   flex: 2;
   padding: 2rem 0;
   display: flex;
@@ -171,7 +205,6 @@ p {
 .btn-main::before {
   content: '';
   position: absolute;
-  z-index: -1;
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
@@ -188,24 +221,43 @@ p {
 
 @media all and (min-width: 480px) {
 
-.btn-main {
-  width: 30rem;
-  height: 30rem;
-  font-size: 5rem;
+ .btn-main {
+  width: 25rem;
+  height: 25rem;
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
 .btn-main::before {
-  width: 20rem;
-  height: 20rem;
+  width: 25rem;
+  height: 25rem;
 }
 
 .btn-main:hover::before {
-  width: 40rem;
-  height: 40rem;
+  width: 35rem;
+  height: 35rem;
+} 
 }
 
-}
 
-.header {
-  color: white;
-}
+
+@media all and (min-width: 1024px) {
+
+  .btn-main {
+   width: 30rem;
+   height: 30rem;
+   font-size: 5rem;
+   margin-bottom: 2rem;
+ }
+ 
+ .btn-main::before {
+   width: 20rem;
+   height: 20rem;
+ }
+ 
+ .btn-main:hover::before {
+   width: 40rem;
+   height: 40rem;
+ } 
+ }
+
