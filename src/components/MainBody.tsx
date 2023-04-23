@@ -3,8 +3,7 @@ import React from 'react'
 const MainBody = () => {
   return (
     <div className='main-body'>
-
-      <div className="intro-section">
+      <div className="intro-container">
         <h5 className='sub-heading'>SO, YOU WANT TO TRAVEL TO</h5>
         <h1 className='heading'>SPACE</h1>
         <p className='description'>
@@ -13,9 +12,8 @@ const MainBody = () => {
           because we’ll give you a truly out of this world experience!
         </p>
       </div>
-
-      <div className="cta-container">
-        <button>EXPLORE</button>
+      <div className="btn-container">
+        <button className='btn-main'>EXPLORE</button>
       </div>
     </div>
   )

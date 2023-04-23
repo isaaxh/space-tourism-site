@@ -22,21 +22,22 @@
   --font-size-heading-4: 3.2rem;
   --font-size-heading-5: 2rem; /* Secondary font family */
 
-  --font-size-subheading-1: 28px;
-  --font-size-subheading-2: 14px; /* Secondary font family */
-  --font-size-nav-text: 16px; /* Secondary font family */
+  --font-size-subheading-1: 2.8rem;
+  --font-size-subheading-2: 1.4rem; /* Secondary font family */
+  --font-size-nav-text: 1.6rem; /* Secondary font family */
 
-  --letter-spacing-heading-5: 4.75px;
-  --letter-spacing-subheading-2: 2.35px;
-  --letter-spacing-nav-text: 2.7px;
+  --letter-spacing-heading-5: 0.475rem;
+  --letter-spacing-subheading-2: 0.235rem;
+  --letter-spacing-nav-text: 0.27rem;
 }
 
 /* reset css rules */
 
-* {
+*, *:before, *:after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 html {
@@ -44,21 +45,30 @@ html {
 }
 
 h1,h2,h3,h4 {
-  font-family: var(--font-family-primary);
   color: var(--color-heading-text);
+}
+
+h1,h2,h3,h4,button {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
 }
 
 h5 {
   font-family: var(--font-family-secondary);
+  font-weight: 400;
   letter-spacing: var(--letter-spacing-heading-5);
 }
 
-h5, body {
+h1,h2,h3,h4,h5,p {
+  padding-top: 1rem;
+}
+
+h5, p {
   color: var(--color-subtext);
 }
 
 h1 {
-  font-size: var(--font-size-heading-1);
+  font-size: clamp(110px, 20vw, 200px);
 }
 h2 {
   font-size: var(--font-size-heading-2);
@@ -72,8 +82,16 @@ h4 {
 h5 {
   font-size: var(--font-size-heading-5);
 }
+p {
+  font-size: 1.6rem;
+  line-height: 2;
+}
 
-
+@media all and (min-width: 480px) {
+  /* h1 {
+    font-size: 150px;
+  } */
+}
 
 
 .App {
@@ -101,16 +119,79 @@ h5 {
 
 
 .header {
-  /* background-color: coral; */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .main-body {
-  /* background-color: coral; */
   flex: 1;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
+.intro-container {
+  /* background-color: coral; */
+  flex: 2;
+  padding: 2rem 0;
+}
+
+.sub-heading {
+  padding-top: 5rem;
+}
+
+.heading {
+  padding: 3rem 0;
+}
+
+.description {
+  padding-top: 0;
+}
+
+.btn-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.btn-main {
+  position: relative;
+  z-index: 1;
+  width: 20rem;
+  height: 20rem;
+  font-size: 3rem;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* transition: all 0.5s; */
+}
+
+/* .btn-main:hover {
+  width: 25rem;
+  height: 25rem;
+} */
+
+.btn-main::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: var(--color-heading-text);
+  opacity: 0%;
+  transition: all 0.6s ease-in-out;
+}
+
+.btn-main:hover::before {
+  opacity: 20%;
+  width: 30rem;
+  height: 30rem;
+}
 
