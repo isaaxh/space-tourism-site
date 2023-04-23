@@ -16,11 +16,11 @@
   --font-family-primary: Bellefair, sans-serif;
   --font-family-secondary: Barlow Condensed, sans-serif;
 
-  --font-size-heading-1: 150px;
-  --font-size-heading-2: 100px;
-  --font-size-heading-3: 56px;
-  --font-size-heading-4: 32px;
-  --font-size-heading-5: 28px; /* Secondary font family */
+  --font-size-heading-1: 15rem;
+  --font-size-heading-2: 10rem;
+  --font-size-heading-3: 5.6rem;
+  --font-size-heading-4: 3.2rem;
+  --font-size-heading-5: 2rem; /* Secondary font family */
 
   --font-size-subheading-1: 28px;
   --font-size-subheading-2: 14px; /* Secondary font family */
@@ -40,7 +40,7 @@
 }
 
 html {
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
 }
 
 h1,h2,h3,h4 {
@@ -58,8 +58,7 @@ h5, body {
 }
 
 h1 {
-  /* font-size: var(--font-size-heading-1); */
-  font-size: 150px;
+  font-size: var(--font-size-heading-1);
 }
 h2 {
   font-size: var(--font-size-heading-2);
