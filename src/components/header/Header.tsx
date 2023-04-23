@@ -9,8 +9,8 @@ const Header = () => {
   const [isMobile, setMobile] = useState(window.innerWidth < 480);
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth < 1024);
-    setTablet(window.innerWidth < 768);
+    setDesktop(window.innerWidth > 1024);
+    setTablet(window.innerWidth > 480 && window.innerWidth < 1024);
     setMobile(window.innerWidth < 480);
   };
 
@@ -22,6 +22,7 @@ const Header = () => {
   return (
     <div className='header'>
         <Logo />
+        {isDesktop}
         {!isMobile ? <NavBar tabletScreen={isTablet} /> : <BurgerMenu />}
     </div>
   )
