@@ -93,10 +93,6 @@ p {
   font-size: clamp(1.4rem, 2vw, 2rem);
 }
 
-hr {
-  width: 100%;
-}
-
 .App {
   height: 100vh;
   width: 100vw;
@@ -131,6 +127,28 @@ hr {
   padding-left: 5%;
 }
 
+@media all and (min-width: 1024px) {
+  .header {
+    margin-top: 3rem;
+  }
+}
+
+.hr-div {
+  flex: 1;
+  margin-right: -4rem;
+  margin-left: 7rem;
+  z-index: 1;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #fefefe5b;
+  margin: 1em 0;
+  padding: 0;
+}
+
 .nav-bar {
   letter-spacing: var(--letter-spacing-nav-text);
   color: var(--color-heading-text);
@@ -139,10 +157,14 @@ hr {
   display: flex;
   gap: 1rem; 
   height: 10vh;
-  width: 70vw;
+  width: 55vw;
   align-items: center;
   justify-content: space-around;
-  padding-inline: 2rem;
+  padding: 0 15rem 0 8rem;
+}
+
+@media all and (min-width: 1024px) {
+
 }
 
 .glass{
