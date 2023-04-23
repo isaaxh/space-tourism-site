@@ -22,7 +22,9 @@ const Header = () => {
   return (
     <div className='header'>
         <Logo />
-        {isDesktop}
+        <div>
+          {isDesktop ? <hr/> : null}
+        </div>
         {!isMobile ? <NavBar tabletScreen={isTablet} /> : <BurgerMenu />}
     </div>
   )
