@@ -15,9 +15,10 @@ const Header = () => {
   };
 
   useEffect(() => {
+    updateMedia();
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
-  });
+  }, []);
 
   return (
     <div className='header'>
