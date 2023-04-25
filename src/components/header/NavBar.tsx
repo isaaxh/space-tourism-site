@@ -1,18 +1,25 @@
+import { Link } from 'react-router-dom';
+import Style from './Header.module.css';
 
 interface NavBarProps {
-  tabletScreen: boolean;
+  tabletScreen?: boolean;
 }
 
 
 const NavBar = ({tabletScreen} : NavBarProps) => {
   return (
-    <ul className='nav-bar glass'>
-        <li className='nav-links'><span className={tabletScreen ? 'link-number-inactive' : 'link-number-active'}>00</span>Home</li>
-        <li className='nav-links'><span className={tabletScreen ? 'link-number-inactive' : 'link-number-active'}>01</span>Destination</li>
-        <li className='nav-links'><span className={tabletScreen ? 'link-number-inactive' : 'link-number-active'}>02</span>Crew</li>
-        <li className='nav-links'><span className={tabletScreen ? 'link-number-inactive' : 'link-number-active'}>03</span>Technology</li>
-    </ul>
+    <nav className={`${Style['nav-bar']} ${Style.glass}`}>
+        <Link to='/'           className={Style['nav-links']}><span className={tabletScreen ? Style['link-number-inactive'] : Style['link-number-active']}>00</span>Home</Link>
+        <Link to='/destination'className={Style['nav-links']}><span className={tabletScreen ? Style['link-number-inactive'] : Style['link-number-active']}>01</span>Destination</Link>
+        <Link to='crew'        className={Style['nav-links']}><span className={tabletScreen ? Style['link-number-inactive'] : Style['link-number-active']}>02</span>Crew</Link>
+        <Link to='technology'  className={Style['nav-links']}><span className={tabletScreen ? Style['link-number-inactive'] : Style['link-number-active']}>03</span>Technology</Link>
+        
+      {/* <Link to='/'>Home</Link>
+      <Link to='/destination'>Destination</Link>
+      <Link to='/crew'>Crew</Link>
+      <Link to='/technology'>Technology</Link> */}
+    </nav>
   )
 }
 
-export default NavBar
+export default NavBar;

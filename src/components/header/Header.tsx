@@ -2,6 +2,7 @@ import { ReactComponent as Logo } from '../../assets/shared/logo.svg';
 import { ReactComponent as BurgerMenu } from '../../assets/shared/icon-hamburger.svg';
 import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
+import Style from './Header.module.css';
 
 const Header = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth < 1024);
@@ -28,9 +29,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className='header'>
+    <div className={Style.header}>
         <Logo />
-        <div className='hr-div'>
+        <div className={Style['hr-div']}>
           {isDesktop ? <hr/> : null}
         </div>
         {!isMobile ? <NavBar tabletScreen={isTablet} /> : <BurgerMenu />}
