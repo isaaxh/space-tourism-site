@@ -7,12 +7,19 @@ const Header = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth < 1024);
   const [isTablet, setTablet] = useState(window.innerWidth < 768);
   const [isMobile, setMobile] = useState(window.innerWidth < 480);
+  // const [currentPage, setCurrentPage] = useState();
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 1024);
     setTablet(window.innerWidth > 480 && window.innerWidth < 1024);
     setMobile(window.innerWidth < 480);
   };
+
+  const updateCurrentPage = () => {
+    // setCurrentPage();
+  }
+
+
 
   useEffect(() => {
     updateMedia();
