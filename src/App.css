@@ -45,7 +45,7 @@ html {
   font-size: 62.5%;
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4, .link-number-active {
   color: var(--color-heading-text);
 }
 
@@ -65,7 +65,7 @@ h1,h2,h3,h4,h5,p {
   padding-top: 1rem;
 }
 
-h5, p {
+h5, p, .nav-links {
   color: var(--color-subtext);
 }
 
@@ -180,7 +180,7 @@ hr {
 .link-number-active {
   display: inline;
   font-weight: 800;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .link-number-inactive{
@@ -189,17 +189,21 @@ hr {
 
 .nav-links {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
 }
 
-.nav-links::after {
+.nav-links:hover::after {
   content: '';
   position: absolute;
-  left: 0%;
-  bottom: 0%;
-  height: 2px;
+  left: 0;
+  bottom: 0;
+  height: 3px;
   width: 100%;
-  margin-top: 5rem;
-  background-color: coral;
+  background-color: var(--color-heading-text);
+  opacity: 50%;
 }
 
 .main-body {
