@@ -1,4 +1,4 @@
-import { Link, Outlet, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import { Outlet, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import './App.css'
 import Header from './components/header/Header'
 import Home from './pages/home/Home'
@@ -14,11 +14,10 @@ function App() {
         <Route index element={<Home/>} />
         <Route path='/destination' element={<Destination/>} />
         <Route path='/crew' element={<Crew/>} />
-        <Route path='technology' element={<Technology/>} />
+        <Route path='/technology' element={<Technology/>} />
       </Route>
     )
   )
-
   return (
     <div className="App">
       <RouterProvider router={router} />
@@ -29,7 +28,7 @@ function App() {
 const Root = () => {
   return (
    <>
-     <Header />
+      <Header />
       <Outlet />
    </>
  

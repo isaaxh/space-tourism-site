@@ -103,5 +103,24 @@ hr {
     background-color: var(--color-heading-text);
     opacity: 50%;
 }
+
+.active {
+    color: var(--color-heading-text);
+}
+
+.active:hover::after {
+    opacity: 100%;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-heading-text);
+    opacity: 100%;
+}
   
   
