@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import Style from './Home.module.css';
 
 const Home = () => {
@@ -13,7 +14,9 @@ const Home = () => {
         </p>
       </div>
       <div className={Style["btn-container"]}>
-        <button className={Style['btn-main']}>EXPLORE</button>
+        <button className={Style['btn-main']}>
+          EXPLORE
+        </button>
       </div>
     </div>
   )
