@@ -7,13 +7,12 @@ import Crew from './pages/crew/Crew'
 import Technology from './pages/technology/Technology'
 import { useEffect, useState } from 'react'
 import { AppContext } from './contexts/AppContext'
-import img from './assets/home/background-home-mobile.jpg'
+// import img from './assets/home/background-home-mobile.jpg'
 
 
 function App() {
   const [currentTab, setCurrentTab] = useState<string>('home');
-
-  // const nextImgPath = `/assets/home/background-home-mobile.jpg`
+  const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -30,9 +29,13 @@ function App() {
     setCurrentTab(activeTab);
   }
 
-  useEffect(() => {
-    console.log(currentTab);
-  }, [currentTab])
+  const handleMenuOpenState = (nextState: boolean) => {
+    setMenuOpen(nextState);
+  }
+
+  // useEffect(() => {
+  //   console.log(isMenuOpen);
+  // }, [isMenuOpen])
   
   
   const appStyle = {
@@ -42,7 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider value={{handleActiveTabState}}>
+      <AppContext.Provider value={{handleActiveTabState, 
+        handleMenuOpenState, isMenuOpen}}>
         <RouterProvider router={router} />
       </AppContext.Provider>
     </div>
