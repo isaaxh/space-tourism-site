@@ -7,10 +7,13 @@ import Crew from './pages/crew/Crew'
 import Technology from './pages/technology/Technology'
 import { useEffect, useState } from 'react'
 import { AppContext } from './contexts/AppContext'
+import img from './assets/home/background-home-mobile.jpg'
 
 
 function App() {
   const [currentTab, setCurrentTab] = useState<string>('home');
+
+  // const nextImgPath = `/assets/home/background-home-mobile.jpg`
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -33,11 +36,12 @@ function App() {
   
   
   const appStyle = {
-    backgroundImage: `url('./assets/${currentTab}/background-home-mobile.jpg')`
+    // backgroundImage: `url('./assets/${currentTab}/background-${currentTab}-mobile.jpg')`
+    // backgroundImage: `url(${img})`
   }
 
   return (
-    <div className="App" >
+    <div className="App">
       <AppContext.Provider value={{handleActiveTabState}}>
         <RouterProvider router={router} />
       </AppContext.Provider>
