@@ -7,6 +7,7 @@ import Crew from './pages/crew/Crew'
 import Technology from './pages/technology/Technology'
 import { useEffect, useState } from 'react'
 import { AppContext } from './contexts/AppContext'
+import Sidebar from './components/sidebar/Sidebar'
 // import img from './assets/home/background-home-mobile.jpg'
 
 
@@ -58,6 +59,7 @@ const Root = () => {
    <>
       <Header />
       <Outlet />
+      <Sidebar />
    </>
  
   )
