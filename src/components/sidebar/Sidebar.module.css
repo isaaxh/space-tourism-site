@@ -19,6 +19,13 @@
     background-color: white;
 }
 
+.glass{
+    background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .cross-container {
     height: 10vh;
     display: flex;
