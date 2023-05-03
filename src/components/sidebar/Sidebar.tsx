@@ -18,7 +18,7 @@ const Sidebar = () => {
     }
 
   return (
-    <div className={`${Style.container} ${Style.glass} ${!isMenuOpen ? 'menuOpen' : ''}`}>
+    <div className={`${Style.container} ${Style.glass} ${isMenuOpen ? Style.menuOpen : Style.menuClose}`}>
         <div className={Style['cross-container']}>
             <ClearIcon className={Style.cross}/>
         </div>
