@@ -83,16 +83,22 @@ hr {
     height: 100%;
     cursor: pointer;
 }
-  
-.nav-links:hover::after {
+
+.nav-links::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     height: 3px;
-    width: 100%;
+    width: 0;
     background-color: var(--color-heading-text);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.nav-links:hover::after {
     opacity: 50%;
+    width: 100%;
 }
 
 .active {
@@ -112,6 +118,7 @@ hr {
     width: 100%;
     background-color: var(--color-heading-text);
     opacity: 100%;
+    transition: all .5s ease-in-out;
 }
   
   
