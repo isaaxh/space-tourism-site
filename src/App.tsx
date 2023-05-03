@@ -5,7 +5,7 @@ import Home from './pages/home/Home'
 import Destination from './pages/destination/Destination'
 import Crew from './pages/crew/Crew'
 import Technology from './pages/technology/Technology'
-import { useContext, useEffect, useState } from 'react'
+import { createRef, useContext, useEffect, useRef, useState } from 'react'
 import { AppContext } from './contexts/AppContext'
 import Sidebar from './components/sidebar/Sidebar'
 // import img from './assets/home/background-home-mobile.jpg'
@@ -14,6 +14,7 @@ import Sidebar from './components/sidebar/Sidebar'
 function App() {
   const [currentTab, setCurrentTab] = useState<string>('home');
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -42,8 +43,11 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider value={{handleActiveTabState, 
-        handleMenuOpenState, isMenuOpen}}>
+      <AppContext.Provider value={{
+        handleActiveTabState, 
+        handleMenuOpenState, 
+        isMenuOpen
+        }}>
         <RouterProvider router={router} />
       </AppContext.Provider>
     </div>

@@ -14,25 +14,12 @@ const Sidebar = () => {
 
     const handleLinkClick = (currentTab: string) => {
         handleActiveTabState(currentTab)
+        handleMenuOpenState(false)
     }
 
     const handleCrossClick = () => {
         handleMenuOpenState(false)
     }
-
-    // useEffect(() => {
-    //     const handleClickOutside = (event: MouseEvent) => {
-    //       if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
-    //         handleMenuOpenState(false);
-    //       }
-    //     };
-    
-    //     document.addEventListener('click', handleClickOutside);
-    
-    //     return () => {
-    //       document.removeEventListener('click', handleClickOutside);
-    //     };
-    //   }, [sidebarRef]);
 
   return (
     <div ref={sidebarRef} className={`${Style.container} ${Style.glass} ${isMenuOpen ? Style.menuOpen : ''}`}>
