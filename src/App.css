@@ -101,6 +101,7 @@ p {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+  /* pointer-events: none; */
 }
 
 @media all and (min-width: 480px) {
@@ -114,4 +115,14 @@ p {
   .App {
     background-image: url("./assets/home/background-home-desktop.jpg");
   }
+}
+
+.sidebar-overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0.8;
+  background-color: rgba(0, 0, 0, 0.18);
 }

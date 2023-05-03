@@ -2,16 +2,15 @@ import Style from './Sidebar.module.css'
 import { NavLink } from 'react-router-dom'
 import ClearIcon from '@mui/icons-material/Clear';
 import { AppContext } from '../../contexts/AppContext';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 
 const Sidebar = () => {
 
+    const sidebarRef = useRef<HTMLDivElement>(null);
+
     const { isMenuOpen, handleActiveTabState, handleMenuOpenState } = useContext(AppContext)
 
-    useEffect(() => {
-      console.log(isMenuOpen);                                                  
-    }, [isMenuOpen])
-    
+
 
     const handleLinkClick = (currentTab: string) => {
         handleActiveTabState(currentTab)
@@ -21,8 +20,22 @@ const Sidebar = () => {
         handleMenuOpenState(false)
     }
 
+    // useEffect(() => {
+    //     const handleClickOutside = (event: MouseEvent) => {
+    //       if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+    //         handleMenuOpenState(false);
+    //       }
+    //     };
+    
+    //     document.addEventListener('click', handleClickOutside);
+    
+    //     return () => {
+    //       document.removeEventListener('click', handleClickOutside);
+    //     };
+    //   }, [sidebarRef]);
+
   return (
-    <div className={`${Style.container} ${Style.glass} ${isMenuOpen ? Style.menuOpen : Style.menuClose}`}>
+    <div ref={sidebarRef} className={`${Style.container} ${Style.glass} ${isMenuOpen ? Style.menuOpen : ''}`}>
         <div className={Style['cross-container']}>
             <ClearIcon className={Style.cross} onClick={handleCrossClick} />
         </div>

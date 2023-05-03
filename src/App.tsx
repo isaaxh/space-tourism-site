@@ -5,7 +5,7 @@ import Home from './pages/home/Home'
 import Destination from './pages/destination/Destination'
 import Crew from './pages/crew/Crew'
 import Technology from './pages/technology/Technology'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { AppContext } from './contexts/AppContext'
 import Sidebar from './components/sidebar/Sidebar'
 // import img from './assets/home/background-home-mobile.jpg'
@@ -33,10 +33,6 @@ function App() {
   const handleMenuOpenState = (nextState: boolean) => {
     setMenuOpen(nextState);
   }
-
-  // useEffect(() => {
-  //   console.log(isMenuOpen);
-  // }, [isMenuOpen])
   
   
   const appStyle = {
@@ -55,13 +51,16 @@ function App() {
 }
 
 const Root = () => {
+  
+  const { isMenuOpen, handleMenuOpenState } = useContext(AppContext)
+
   return (
    <>
       <Header />
       <Outlet />
       <Sidebar />
+      {isMenuOpen && <div className="sidebar-overlay" onClick={() => handleMenuOpenState(false)} />}
    </>
- 
   )
  }
 
