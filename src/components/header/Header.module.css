@@ -48,6 +48,7 @@ hr {
     align-items: center;
     justify-content: space-around;
     padding: 0 3rem 0 5rem;  
+    font-size: clamp(1.4rem, 2vw, 2rem);
 }
   
 @media all and (min-width: 1024px) {
@@ -60,16 +61,8 @@ hr {
     font-family: var(--font-family-secondary);
     font-weight: 400;
     letter-spacing: var(--letter-spacing-heading-5);
-}
-
-.nav-links {
     color: var(--color-subtext);
 }
-
-.nav-bar {
-    font-size: clamp(1.4rem, 2vw, 2rem);
-}
-
 
 .link-number-active {
     display: inline;
