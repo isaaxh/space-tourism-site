@@ -6,11 +6,7 @@ import { useContext, useEffect, useRef } from 'react';
 
 const Sidebar = () => {
 
-    const sidebarRef = useRef<HTMLDivElement>(null);
-
     const { isMenuOpen, handleActiveTabState, handleMenuOpenState } = useContext(AppContext)
-
-
 
     const handleLinkClick = (currentTab: string) => {
         handleActiveTabState(currentTab)
@@ -22,7 +18,7 @@ const Sidebar = () => {
     }
 
   return (
-    <div ref={sidebarRef} className={`${Style.container} ${Style.glass} ${isMenuOpen ? Style.menuOpen : ''}`}>
+    <div className={`${Style.container} ${Style.glass} ${isMenuOpen ? Style.menuOpen : ''}`}>
         <div className={Style['cross-container']}>
             <ClearIcon className={Style.cross} onClick={handleCrossClick} />
         </div>

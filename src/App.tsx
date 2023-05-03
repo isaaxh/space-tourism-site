@@ -68,4 +68,4 @@ const Root = () => {
   )
  }
 
-export default App
+export default App;
