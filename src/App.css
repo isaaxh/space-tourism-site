@@ -123,6 +123,6 @@ p {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 0.8;
+  z-index: 0.9;
   background-color: rgba(0, 0, 0, 0.075);
 }
