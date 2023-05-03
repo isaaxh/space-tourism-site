@@ -6,7 +6,7 @@ import { useContext, useEffect } from 'react';
 
 const Sidebar = () => {
 
-    const { isMenuOpen, handleActiveTabState } = useContext(AppContext)
+    const { isMenuOpen, handleActiveTabState, handleMenuOpenState } = useContext(AppContext)
 
     useEffect(() => {
       console.log(isMenuOpen);                                                  
@@ -17,10 +17,14 @@ const Sidebar = () => {
         handleActiveTabState(currentTab)
     }
 
+    const handleCrossClick = () => {
+        handleMenuOpenState(false)
+    }
+
   return (
     <div className={`${Style.container} ${Style.glass} ${isMenuOpen ? Style.menuOpen : Style.menuClose}`}>
         <div className={Style['cross-container']}>
-            <ClearIcon className={Style.cross}/>
+            <ClearIcon className={Style.cross} onClick={handleCrossClick} />
         </div>
         <nav className={`${Style['nav-links-container']}`}>
             <NavLink to='/'            onClick={() => handleLinkClick('home')} className={({ isActive }) => (isActive ? `${Style.active} ${Style['nav-links']}`: `${Style.inactive} ${Style['nav-links']}`)}><span className={Style['link-number-active']}>00</span>Home</NavLink>

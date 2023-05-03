@@ -56,6 +56,8 @@
     position: relative;
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     font-family: var(--font-family-secondary);
     font-weight: 500;
     letter-spacing: var(--letter-spacing-heading-5);
@@ -78,7 +80,7 @@
     content: '';
     position: absolute;
     right: 0;
-    height: 100%;
+    height: 120%;
     width: 3px;
     background-color: var(--color-heading-text);
     opacity: 100%;
