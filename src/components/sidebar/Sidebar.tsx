@@ -1,5 +1,4 @@
 import Style from './Sidebar.module.css'
-import HeaderStyle from '../header/Header.module.css'
 import { NavLink } from 'react-router-dom'
 import ClearIcon from '@mui/icons-material/Clear';
 import { AppContext } from '../../contexts/AppContext';
@@ -33,4 +32,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar;
