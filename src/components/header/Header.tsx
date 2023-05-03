@@ -13,10 +13,6 @@ const Header = () => {
   const { isMenuOpen, handleMenuOpenState } = useContext(AppContext);
 
   useEffect(() => {
-    console.log(isMenuOpen)
-  }, [isMenuOpen])
-  
-  useEffect(() => {
     updateMedia();
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);

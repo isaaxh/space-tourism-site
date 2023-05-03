@@ -2,14 +2,24 @@ import Style from './Sidebar.module.css'
 import HeaderStyle from '../header/Header.module.css'
 import { NavLink } from 'react-router-dom'
 import ClearIcon from '@mui/icons-material/Clear';
+import { AppContext } from '../../contexts/AppContext';
+import { useContext, useEffect } from 'react';
 
 const Sidebar = () => {
 
+    const { isMenuOpen, handleActiveTabState } = useContext(AppContext)
+
+    useEffect(() => {
+      console.log(isMenuOpen);                                                  
+    }, [isMenuOpen])
+    
+
     const handleLinkClick = (currentTab: string) => {
-        
+        handleActiveTabState(currentTab)
     }
+
   return (
-    <div className={`${Style.container} ${HeaderStyle.glass}`}>
+    <div className={`${Style.container} ${HeaderStyle.glass} ${!isMenuOpen ? 'menuOpen' : ''}`}>
         <div className={Style['cross-container']}>
             <ClearIcon className={Style.cross}/>
         </div>

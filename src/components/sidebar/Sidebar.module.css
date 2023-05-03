@@ -1,6 +1,7 @@
 .container {
     position: absolute;
-    right: 0;
+    /* right: 0; */
+    left: 0;
     top: 0;
     z-index: 1;
     height: 100vh;
@@ -9,6 +10,13 @@
     flex-direction: column;
     padding: 10% 0;
     font-size: clamp(1.4rem, 5vw, 2rem);
+    /* transform: translateX(100%); */
+    /* background-color: black; */
+}
+
+.menuOpen {
+    /* transform: translateX(0); */
+    background-color: white;
 }
 
 .cross-container {
