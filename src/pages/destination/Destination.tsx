@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../../App.css';
 import Style from './Destination.module.css';
 import HeaderStyle from '../../components/header/Header.module.css';
 import moonImg from '../../assets/destination/image-moon.png';
@@ -32,14 +33,14 @@ const Destination = () => {
           by visiting the Luna 2 and Apollo 11 landing sites.
         </p>
         <hr />
-        <div className={Style['stat-container']}>
-          <div className={Style["stat-distance"]}>
-            <h5 className={Style['stat-subheadings']}>Avg. distance</h5>
-            <h3 className={Style['stat-data']}>384,400 km</h3>
+        <div className={Style['stats-container']}>
+          <div className={Style["stats-distance"]}>
+            <div className={`sub-heading-2 ${Style['stat-subheadings']}`}>Avg. distance</div>
+            <div className={`sub-heading-1 ${Style['stat-data']}`}>384,400 km</div>
           </div>
-          <div className={Style["stat-travel-time"]}>
-            <h5 className={Style['stat-subheadings']}>Est. travel time</h5>
-            <h3 className={Style['stat-data']}>3 days</h3>
+          <div className={Style["stats-time"]}>
+            <div className={`sub-heading-2 ${Style['stat-subheadings']}`}>Est. travel time</div>
+            <div className={`sub-heading-1 ${Style['stat-data']}`}>3 days</div>
           </div>
         </div>
       </div>

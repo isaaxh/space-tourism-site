@@ -56,7 +56,7 @@ h1,h2,h3,h4,button {
 
 h5 {
   font-family: var(--font-family-secondary);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: var(--letter-spacing-heading-5);
 }
 
@@ -76,6 +76,7 @@ h2 {
   font-size: var(--font-size-heading-2);
 }
 h3 {
+  font-size: clamp(80px, 8vw, var(--font-size-heading-2));
   font-size: var(--font-size-heading-3);
 }
 h4 {
@@ -99,6 +100,26 @@ nav {
   align-items: center;
   justify-content: space-around;
   font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.sub-heading-1 {
+  font-family: var(--font-family-primary);
+  color: var(--color-heading-text);
+  /* font-size: clamp(var(--font-size-subheading-1),10vw, 5rem); */
+  font-size: var(--font-size-subheading-1);
+}
+
+.sub-heading-2 {
+  font-family: var(--font-family-secondary);
+  color: var(--color-subtext);
+  font-size: var(--font-size-subheading-2);
+  letter-spacing: var(--letter-spacing-subheading-2);
+}
+
+.nav-text {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-nav-items);
+  letter-spacing: var(--letter-spacing-nav-text);
 }
 
 .App {
