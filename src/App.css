@@ -113,7 +113,10 @@ nav {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  /* pointer-events: none; */
+}
+
+.disable-scroll {
+  overflow: hidden;
 }
 
 @media all and (min-width: 480px) {

@@ -19,10 +19,10 @@ const Destination = () => {
         <img className={Style['destination-img']} src={moonImg} alt="moon" />
       </div>
       <nav className={Style['nav-container']}>
-        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'moon'  ? Style['active'] : ''}`}   onClick={() => handleLinkClick('moon')}   >Moon</li>
-        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'mars'  ? Style['active'] : ''}`}   onClick={() => handleLinkClick('mars')}   >Mars</li>
-        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'europa'? Style['active'] : ''}`} onClick={() => handleLinkClick('europa')} >Europa</li>
-        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'titan' ? Style['active'] : ''}`}  onClick={() => handleLinkClick('titan')}  >Titan</li>
+        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'moon'  ? HeaderStyle['active'] : ''}`}   onClick={() => handleLinkClick('moon')}   >Moon</li>
+        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'mars'  ? HeaderStyle['active'] : ''}`}   onClick={() => handleLinkClick('mars')}   >Mars</li>
+        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'europa'? HeaderStyle['active'] : ''}`} onClick={() => handleLinkClick('europa')} >Europa</li>
+        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'titan' ? HeaderStyle['active'] : ''}`}  onClick={() => handleLinkClick('titan')}  >Titan</li>
       </nav>
       <div className={Style['content-container']}>
         <h1 className={Style.title}>Moon</h1>

@@ -45,15 +45,24 @@ hr {
   
 @media all and (min-width: 1024px) {
     .nav-bar {
-      padding: 0 15rem 0 8rem;
+        padding: 0 15rem 0 8rem;
     }
 }
 
-.nav-items {
+.nav-links {
     font-family: var(--font-family-secondary);
     font-weight: 600;
     letter-spacing: var(--letter-spacing-heading-5);
     color: var(--color-subtext);
+}
+
+.nav-links {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
 }
 
 .link-number-active {
@@ -67,14 +76,6 @@ hr {
     display: none;
 }
   
-.nav-items {
-    position: relative;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    cursor: pointer;
-}
 
 .nav-links::after {
     content: '';

@@ -42,7 +42,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={`App ${isMenuOpen ? 'disable-scroll' : ''}`}>
       <AppContext.Provider value={{
         handleActiveTabState, 
         handleMenuOpenState, 

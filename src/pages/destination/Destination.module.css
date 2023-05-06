@@ -25,20 +25,12 @@
 
 .nav-container {
     margin-bottom: 1rem;
-    min-height: 5vh;
+    height: 5vh;
     /* background-color: coral; */
 }
 
 .destination-links {
     height: 100%;
-}
-
-.destiontion::after {
-    content: '';
-}
-
-.active {
-    /* background-color: #fff; */
 }
 
 .title {
