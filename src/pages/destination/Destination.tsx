@@ -19,13 +19,13 @@ const Destination = () => {
       <div className={Style['img-container']}>
         <img className={Style['destination-img']} src={moonImg} alt="moon" />
       </div>
+      <div className={Style['content-container']}>
       <nav className={Style['nav-container']}>
         <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'moon'  ? HeaderStyle['active'] : ''}`}   onClick={() => handleLinkClick('moon')}   >Moon</li>
         <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'mars'  ? HeaderStyle['active'] : ''}`}   onClick={() => handleLinkClick('mars')}   >Mars</li>
         <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'europa'? HeaderStyle['active'] : ''}`} onClick={() => handleLinkClick('europa')} >Europa</li>
         <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'titan' ? HeaderStyle['active'] : ''}`}  onClick={() => handleLinkClick('titan')}  >Titan</li>
       </nav>
-      <div className={Style['content-container']}>
         <h1 className={Style.title}>Moon</h1>
         <p className={Style.description}>  
           See our planet as you’ve never seen it before. A perfect relaxing trip away to help 

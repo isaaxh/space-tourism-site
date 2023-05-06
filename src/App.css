@@ -114,6 +114,7 @@ nav {
   color: var(--color-subtext);
   font-size: var(--font-size-subheading-2);
   letter-spacing: var(--letter-spacing-subheading-2);
+  text-transform: uppercase;
 }
 
 .nav-text {
