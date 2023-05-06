@@ -1,5 +1,39 @@
 
 .container {
-    background-color: coral;
     height: 100vh;
+    text-align: center;
+}
+
+.sub-title-number {
+    color: darkgray;
+}
+
+.sub-title {
+    color: var(--color-heading-text);
+    margin: 20px 0 0;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.destination-img {
+    transform: scale(.6);
+}
+
+.nav-container {
+
+}
+
+.destination-links {
+    
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.stat-subheadings {
+    text-transform: uppercase;
 }

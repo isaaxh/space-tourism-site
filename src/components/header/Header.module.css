@@ -37,18 +37,10 @@ hr {
 }
   
 .nav-bar {
-    letter-spacing: var(--letter-spacing-nav-text);
-    color: var(--color-heading-text);
-    text-transform: uppercase;
-    list-style: none;
-    display: flex;
-    gap: 1rem; 
+    gap: 1rem;
     height: 10vh;
-    width: 55vw;
-    align-items: center;
-    justify-content: space-around;
+    min-width: 55vw;
     padding: 0 3rem 0 5rem;  
-    font-size: clamp(1.4rem, 2vw, 2rem);
 }
   
 @media all and (min-width: 1024px) {
