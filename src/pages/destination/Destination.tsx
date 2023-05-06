@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Style from './Destination.module.css';
 import HeaderStyle from '../../components/header/Header.module.css';
 import moonImg from '../../assets/destination/image-moon.png';
@@ -5,6 +6,12 @@ import moonImg from '../../assets/destination/image-moon.png';
 
 
 const Destination = () => {
+  const [currentTab, setCurrentTab] = useState<string>('moon')
+
+  const handleLinkClick = (nextTab: string) => {
+    setCurrentTab(nextTab)
+  } 
+
   return (
     <div className={Style.container}>
       <h5 className={Style['sub-title']}><span className={Style['sub-title-number']}>01</span> Pick your destination</h5>
@@ -12,10 +19,10 @@ const Destination = () => {
         <img className={Style['destination-img']} src={moonImg} alt="moon" />
       </div>
       <nav className={Style['nav-container']}>
-        <li className={`${HeaderStyle['nav-links']}  ${Style['destination-links']}`}>Moon</li>
-        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']}`}>Mars</li>
-        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']}`}>Europa</li>
-        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']}`}>Titan</li>
+        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'moon'  ? Style['active'] : ''}`}   onClick={() => handleLinkClick('moon')}   >Moon</li>
+        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'mars'  ? Style['active'] : ''}`}   onClick={() => handleLinkClick('mars')}   >Mars</li>
+        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'europa'? Style['active'] : ''}`} onClick={() => handleLinkClick('europa')} >Europa</li>
+        <li className={`${HeaderStyle['nav-items']} ${Style['destination-links']} ${currentTab === 'titan' ? Style['active'] : ''}`}  onClick={() => handleLinkClick('titan')}  >Titan</li>
       </nav>
       <div className={Style['content-container']}>
         <h1 className={Style.title}>Moon</h1>
