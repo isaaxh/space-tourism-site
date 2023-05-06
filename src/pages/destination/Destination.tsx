@@ -1,5 +1,7 @@
 import Style from './Destination.module.css';
+import HeaderStyle from '../../components/header/Header.module.css';
 import moonImg from '../../assets/destination/image-moon.png';
+
 
 
 const Destination = () => {
@@ -10,10 +12,10 @@ const Destination = () => {
         <img className={Style['destination-img']} src={moonImg} alt="moon" />
       </div>
       <nav className={Style['nav-container']}>
-        <li className={Style['destination-links']}>Moon</li>
-        <li className={Style['destination-links']}>Mars</li>
-        <li className={Style['destination-links']}>Europa</li>
-        <li className={Style['destination-links']}>Titan</li>
+        <li className={`${HeaderStyle['nav-links']}  ${Style['destination-links']}`}>Moon</li>
+        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']}`}>Mars</li>
+        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']}`}>Europa</li>
+        <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']}`}>Titan</li>
       </nav>
       <div className={Style['content-container']}>
         <h1 className={Style.title}>Moon</h1>

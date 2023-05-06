@@ -51,7 +51,7 @@ hr {
 
 .nav-links {
     font-family: var(--font-family-secondary);
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: var(--letter-spacing-heading-5);
     color: var(--color-subtext);
 }
