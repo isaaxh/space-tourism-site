@@ -3,21 +3,26 @@ import '../../App.css';
 import Style from './Destination.module.css';
 import HeaderStyle from '../../components/header/Header.module.css';
 import moonImg from '../../assets/destination/image-moon.png';
-
+import marsImg from '../../assets/destination/image-mars.png';
+import europaImg from '../../assets/destination/image-europa.png';
+import titanImg from '../../assets/destination/image-titan.png';
 
 
 const Destination = () => {
   const [currentTab, setCurrentTab] = useState<string>('moon')
+  const [currentImg, setCurrentImg] = useState<string>(moonImg)
 
   const handleLinkClick = (nextTab: string) => {
     setCurrentTab(nextTab)
-  } 
+  }
+
+
 
   return (
     <div className={Style.container}>
       <h5 className={Style['sub-title']}><span className={Style['sub-title-number']}>01</span> Pick your destination</h5>
       <div className={Style['img-container']}>
-        <img className={Style['destination-img']} src={moonImg} alt="moon" />
+        <img className={Style['destination-img']} src={currentImg} alt="moon" />
       </div>
       <div className={Style['content-container']}>
       <nav className={Style['nav-container']}>
@@ -26,6 +31,9 @@ const Destination = () => {
         <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'europa'? HeaderStyle['active'] : ''}`} onClick={() => handleLinkClick('europa')} >Europa</li>
         <li className={`${HeaderStyle['nav-links']} ${Style['destination-links']} ${currentTab === 'titan' ? HeaderStyle['active'] : ''}`}  onClick={() => handleLinkClick('titan')}  >Titan</li>
       </nav>
+      <div>
+        
+      </div>
         <h1 className={Style.title}>Moon</h1>
         <p className={Style.description}>  
           See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
