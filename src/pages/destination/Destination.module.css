@@ -4,6 +4,8 @@
     padding: 5%;
 }
 
+
+
 .sub-title-number {
     color: darkgray;
 }
@@ -94,20 +96,47 @@
 
 @media all and (min-width: 1024px) {
     .container {
-        padding-inline: 12%;
+        padding: 3% 12% 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        text-align: left;
+        /* gap: 1.5rem; */
     }
 
     .sub-title {
         grid-column: 1 / -1;
+        font-size: 3rem;
     }
 
     .img-container {
         grid-column: 1 / 2;
+        margin-top: 5rem;
+    }
+
+    .destination-img {
+        transform: scale(1);
+        margin: auto auto ;
     }
 
     .content-container {
         grid-column: 2 / -1;
+        margin-top: 6rem;
+        margin-left: 12rem;
+    }
+
+    .nav-container {
+        margin-inline: 0;
+    }
+
+    .description {
+        margin-inline: 0;
+        width: 70rem;
+    }
+
+    .stats-container {
+        margin-inline: 0;
+        text-align: left;
+        justify-content: space-between;
     }
 }
+
