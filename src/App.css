@@ -70,7 +70,7 @@ h5, p {
 }
 
 h1 {
-  font-size: clamp(90px, 20vw, var(--font-size-heading-1));
+  font-size: clamp(8rem, 20vw, var(--font-size-heading-1));
 }
 h2 {
   font-size: var(--font-size-heading-2);
@@ -83,7 +83,8 @@ h4 {
   font-size: var(--font-size-heading-4);
 }
 h5 {
-  font-size: var(--font-size-heading-5);
+  font-size: clamp(2rem,1vw,var(--font-size-heading-5));
+  /* font-size: var(--font-size-heading-5); */
 }
 p {
   font-size: clamp(1.6rem,2.2vw,2rem);

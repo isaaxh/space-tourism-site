@@ -21,11 +21,12 @@ align-items: center;
 }
 
 .heading {
-padding: 3rem 0;
+padding: 2rem 0;
 }
 
 .description {
 padding-top: 0;
+width: 90%;
 }
 
 .btn-container {
@@ -53,6 +54,10 @@ padding-bottom: 1rem;
 .btn-container {
   grid-column: 2 / -1;
   align-items: flex-end;
+}
+
+.description {
+  width: 100%;
 }
 }
 
