@@ -1,0 +1,24 @@
+
+
+.container {
+    text-align: center;
+    padding: 5%;
+}
+
+
+.sub-title-number {
+    color: darkgray;
+    margin-right: 1rem;
+}
+
+.sub-title {
+    color: var(--color-heading-text);
+    text-transform: uppercase;
+    margin: 20px 0 0;
+}
+
+@media all and (min-width: 480px) {
+    .sub-title {
+        text-align: left;
+    }
+}
