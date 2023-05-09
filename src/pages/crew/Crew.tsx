@@ -12,9 +12,10 @@ const Crew = () => {
           {/* <!-- Additional required wrapper --> */}
           <div className="swiper-wrapper">
             {/* <!-- Slides --> */}
-            <div className="swiper-slide">Slide 1</div>
-            <div className="swiper-slide">Slide 2</div>
-            <div className="swiper-slide">Slide 3</div>
+            <div className="swiper-slide"><img src="../../assets/crew/image-douglas-hurley.png" alt="douglas' img" /></div>
+            <div className="swiper-slide"><img src="../../assets/crew/image-mark-shuttleworth.png" alt="mark's img" /></div>
+            <div className="swiper-slide"><img src="../../assets/crew/image-victor-glover.png" alt="victor's img" /></div>
+            <div className="swiper-slide"><img src="../../assets/crew/image-anousheh-ansari.png" alt="anousheh's img" /></div>
             ...
           </div>
           {/* <!-- If we need pagination --> */}
@@ -24,8 +25,6 @@ const Crew = () => {
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
 
-          {/* <!-- If we need scrollbar --> */}
-          <div className="swiper-scrollbar"></div>
         </div>
       </div>
       <hr />
