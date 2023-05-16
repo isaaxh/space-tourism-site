@@ -1,4 +1,4 @@
-# space-tourism-site
+# SPACE TOURISM SITE
 
 ## Overview
 Provide a brief overview of the project, including its purpose, goals, and any relevant background information.
